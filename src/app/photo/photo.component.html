@@ -1,0 +1,52 @@
+<div class="" style="display:flex;position: fixed;">
+
+    <aside class="navbar navbar-vertical sidebar-box-shadow-light theme-bg-primary navbar-expand-lg   pt-2 pb-4"
+    id="sidebar" style=" display: grid; width: 160px;display: grid;height: 715px;background: aliceblue;">
+    <div class="main" style="margin-top: -326%;margin-left: 18px;display: grid;text-align: center;color: cornflowerblue;">
+        <h3 style="font-size: x-large;
+        font-family: sans-serif;">Welcome</h3>
+
+        <!-- <p>{{user.email}}</p> -->
+        <button class="btn" [routerLink]="['/post']" routerLinkActive="router-link-active"><span class=""
+                style="font-size: larger;color: cornflowerblue; font-family: cursive;font-weight: 200;">Post</span></button>
+        <button class="btn" [routerLink]="['/Album']" routerLinkActive="router-link-active"> <span class=""
+                style="font-size: larger;color: cornflowerblue; font-family: cursive;font-weight: 200;">Albums</span></button>
+    </div>
+</aside>
+</div>
+<div class="top">
+</div>
+<div style="margin-left:125px">
+    
+    <h3 class="text-left mt-5" style="font-size:x-large;padding-left: 5%;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><b>Albums</b></h3>
+    <p style="padding: 5%;">
+        <mat-form-field>
+            <mat-select  (selectionChange)="selected($event)" placeholder="search">
+                <mat-option>
+                    <ngx-mat-select-search [formControl]="searchString" (input)="onChane($event)"  placeholder="search"></ngx-mat-select-search>
+                </mat-option>
+
+                <mat-option *ngFor="let item of filteredData" [value]="item">
+                   <img src="{{item.thumbnailUrl}}" style="width: 30px;border-radius:50%;" alt=""> {{item.title}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </p>
+    <div class="container-sm">
+
+        <h3 class="text-left"></h3>
+
+        <div class="row">
+            <div class="col-sm-4" style="cursor: pointer;" *ngFor='let item of Emp'>
+                <div class="card my-3  ">
+                    <div class="container-sm">
+                        <div class="card-body">
+
+                            <img src="{{item.url}}" style="width: 335px;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+
+.nav-item .siderbar-icon-hover{
+    position: absolute;
+    top:0;
+    left:0;
+    display: none;
+  }
+  .minimize .nav-item:hover .siderbar-icon-hover {
+    display: inline;
+  }
+  .minimize .nav-item.active .siderbar-icon-hover{
+    display: inline;
+  }
+  .btn-check:focus+.btn, .btn:focus{
+    box-shadow: none !important;
+  }
+  #navbar-menu .dropdown.show .dropdown-toggle .dropdown-arrow-icon{
+    transform: rotate(90deg);
+  }
+  .submenu .submenu-icon{
+    display:block;
+  }
+  .submenu.active .submenu-icon{
+    display:none;
+  }
+  .submenu .hover-white{
+    display:none;
+  }
+  .submenu.active .hover-white{
+    display:block;
+  }

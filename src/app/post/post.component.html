@@ -1,0 +1,29 @@
+<div class="" style="display:flex;position: fixed;">
+    <!-- <app-header></app-header> -->
+    <app-side-nav></app-side-nav>
+</div>
+<div class="top">
+</div>
+<div style="margin-left:125px">
+
+    <div class="container-sm" >
+    <h3 class="text-left mt-5" style="font-size:x-large;font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"><b>Posts</b></h3>
+     
+        <h3 class="text-left"></h3>
+        <!-- <div *ngIf="Emp.length == 0; else elseBlock">Nothing to display</div> -->
+        <!-- <ng-template #elseBlock> -->
+        <div class="row" >
+            <div class="col-sm-4"  style="cursor: pointer;"  *ngFor='let item of Emp' (click)="goDetails(item.id)">
+                <div class="card my-3  ">
+                    <div class="container-sm">
+                        <div class="card-body">
+                            <h5 class="card-title" style="font-size: larger;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">{{item.title}}</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- </ng-template> -->
+    </div>
+    </div>
